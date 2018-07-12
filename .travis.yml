@@ -2,20 +2,20 @@ sudo: required
 language: generic
 matrix:
   include:
-    - os: linux
-      dist: trusty
-      env: VERSION=6
-    - os: linux
-      dist: trusty
-      env: VERSION=7
-    - os: osx
-      osx_image: xcode9.2
-      language: generic
+  - os: linux
+    dist: trusty
+    env: VERSION=7
+  - os: osx
+    osx_image: xcode9.2
+    language: generic
 global:
   env:
   - PROJECT=TaskFlow
-  - PROJECT_TEMPLATE=default
+  - PROJECT_TEMPLATE=latest
 install:
-  - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
+- source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
-  - 'cd test && zpm run test-definition TaskFlow'
+- cd test && zpm run test-definition TaskFlow
+notifications:
+  slack:
+    secure: qQ2jzzqUd3MItv5BEhI2F7fm6w/WdQ5DkH55gu4HNk2JoiuucNuX3JNF6fqiZrfa1EaPiwtJJjfvhMLkvUBh01NkpBurZkHyLk+EhFoNvGIOwtqvaEjOtkD57JQb/ZHtfSqcmj9Ea4BrL2/W/aSFlM19Gu6cUiuZQW8koKJ9vJzZJGCjGuRooyuuZzK3K0g11VPx09YI7Z8XqmT/DCZIGyU0lY+y44b0RPDg1UUnjuqSk3HH9wuCAd1vwg6qdCm4XXAWGB76Cux3ObZ0Ep60zl0LZXcUWWF/Ek3zHo8Y4Vd10aVryQJOpNmrOR0ltouBQXjeAz81X1cJseb05TE5Mid5RCyjuj3+q2ulNfbr8p4SxPH1vgGh6yrb9SDuMbenD2jLDPHkpIoD2AuZ/4q+2/Prnzs3KU+j0bRYLF5MO/AfgXGT7qY84+PgRUtDeTYS9VEH18Bc5lEnz2rw03Y/obebVM14fiSmUNOcldBLwuh8HTs6peJGNze2ywkxwQs4cKZVw2J13gkWOTyeyAygI4wx1UcTDI+HOv2oSZ63HNDIZYnGSgQ6ba7Ej5UP/DnLeVB9PxdgUf8QtrKB+I/ihq1SaZ1gy0C3uVmDrDCV9Y5WS/wm+pemYbw8KGYPZvN0wyXX1B0MpBWn2PKt6phSmJwSUqFV0q1aY8WapNph7Ts=
