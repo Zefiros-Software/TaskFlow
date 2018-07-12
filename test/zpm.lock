@@ -1,0 +1,40 @@
+{
+  "definition": "./",
+  "optionals": [],
+  "private": {
+    "libraries": [ {
+      "definition": "../",
+      "hash": "dbd4ae0d5782e237c9f9779f42b4dd731a3481a6",
+      "name": "Zefiros-Software/TaskFlow",
+      "repository": "https://github.com/cpp-taskflow/cpp-taskflow.git",
+      "tag": "HEAD",
+      "versionRequirement": "@head"
+    } ],
+    "modules": [ {
+      "definition": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
+      "hash": "a77f63ca876f12c8c7385a1da244008484d329a1",
+      "name": "Zefiros-Software/Defaults",
+      "public": {
+        "libraries": [ {
+          "definition": "https://github.com/Zefiros-Software/GoogleTest.git",
+          "hash": "41f0e24335d8874cc87420a6349bb1844e2a15de",
+          "name": "Zefiros-Software/GoogleTest",
+          "repository": "https://github.com/google/googletest.git",
+          "tag": "HEAD",
+          "versionRequirement": "@head || ^1.0.0"
+        }, {
+          "definition": "https://github.com/Zefiros-Software/GoogleBenchmark.git",
+          "hash": "1f35fa4aa71bffb5e5672f7ca876561d6adef4fd",
+          "name": "Zefiros-Software/GoogleBenchmark",
+          "repository": "https://github.com/google/benchmark.git",
+          "tag": "HEAD",
+          "versionRequirement": "@head"
+        } ]
+      },
+      "repository": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
+      "tag": "HEAD",
+      "versionRequirement": "@head"
+    } ]
+  },
+  "repository": "./"
+}

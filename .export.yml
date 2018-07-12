@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+version: '>=0.0.0 || @head'
+export: |
+    project "TaskFlow"
+        kind "StaticLib"
+        zpm.export [[
+            includedirs "."
+            cppdialect "C++17"
+        ]]
+...
